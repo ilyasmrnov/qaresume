@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider">
+                <span class="icon sun">🌞</span>
+                <span class="icon moon">🌙</span>
+            </span>
+        </label>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Добавление/удаление темного класса
+        toggle.addEventListener('change', () => {
+            body.classList.toggle('dark', toggle.checked);
+        });
+    </script>
+</body>
+</html>
